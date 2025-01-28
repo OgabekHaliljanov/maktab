@@ -1011,3 +1011,8 @@ span.psw {
   from {transform: scale(0)}
   to {transform: scale(1)}
 }
+.lp{
+  margin-left: 20px ;
+  margin-top: 10px;
+  color: white;
+}
