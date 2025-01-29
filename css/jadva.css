@@ -1,144 +1,75 @@
-/* General table styling */
+.table-container {
+  width: 95%;
+  max-width: 1200px;
+  overflow-x: auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 20px 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #4caf50;
+  color: #ffffff;
+}
+
+thead th {
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #e0f7fa;
+  cursor: pointer;
+}
+
+tbody td {
+  padding: 10px;
+  font-size: 14px;
+  color: #333333;
+}
+
+tbody td:first-child {
+  font-weight: bold;
+}
+
+tbody td:last-child {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  thead {
+      display: none;
   }
-  
-  /* Table header */
-  th {
-    background-color: #3498db;
-    color: white;
-    padding: 12px 16px;
-    text-align: left;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-  }
-  
-  /* Table rows */
-  tr:nth-child(even) {
-    background-color: #ecf0f1;
-  }
-  
-  tr:nth-child(odd) {
-    background-color: #ffffff;
-  }
-  
-  /* Hover effect on rows */
-  tr:hover {
-    background-color: #d6eaf8;
-    transform: scale(1.02);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* Table cells */
-  td {
-    padding: 12px 16px;
-    text-align: left;
-    font-size: 14px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  /* Table borders and rounded corners */
-  table, th, td {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-  }
-  
-  /* Zebra striping effect */
-  tr:nth-child(odd) td {
-    background-color: #f9f9f9;
-  }
-  
-  /* Table caption styling */
-  caption {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    padding: 12px 16px;
-    background-color: #3498db;
-    color: white;
-    text-align: center;
-  }
-  
-  /* Cell text formatting for better readability */
-  td {
-    color: #555;
-    font-weight: 400;
-  }
-  
-  /* Add a subtle shadow on the table */
-  table {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  }
-  
-  /* Add a smooth transition effect to the hover state */
-  tr {
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
-  
-  /* Hover effect on cells */
-  td:hover {
-    background-color: #f0f8ff;
-  }
-  
-  /* Mobile responsiveness - Small screens */
-  @media screen and (max-width: 768px) {
-    /* Make the table scrollable */
-    table {
-      width: 100%;
+
+  tbody tr {
       display: block;
-      overflow-x: auto;
-      white-space: nowrap;
-    }
-  
-    /* Adjust the padding in the table for smaller screens */
-    th, td {
-      padding: 8px 10px;
-      font-size: 12px;
-    }
-  
-    /* Make header text smaller on mobile */
-    th {
-      font-size: 14px;
-    }
+      margin-bottom: 15px;
   }
-  
-  /* Extra small devices (phones, 480px or smaller) */
-  @media screen and (max-width: 480px) {
-    /* Stack table rows vertically */
-    table {
-      display: block;
-    }
-  
-    th, td {
+
+  tbody td {
       display: block;
       text-align: right;
-      padding: 8px;
-      border-bottom: 1px solid #ddd;
-    }
-  
-    /* Adjust the header for readability */
-    th {
-      font-size: 12px;
-      background-color: #3498db;
-      color: white;
-      text-transform: uppercase;
-      letter-spacing: 0.3px;
-    }
-  
-    td {
-      text-align: left;
-    }
-    
-    /* Add spacing between table data for small screens */
-    tr {
-      margin-bottom: 10px;
-    }
+      padding-left: 50%;
+      position: relative;
   }
-  
+
+  tbody td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      font-weight: bold;
+      text-align: left;
+      color: #4caf50;
+  }
+}

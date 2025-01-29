@@ -23,7 +23,77 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
   <link href="css/jadva.css" rel="stylesheet" />
-  
+  <style>
+        .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tbody tr:hover {
+      background-color: #eaf6ea;
+    }
+
+    td {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      table {
+        font-size: 0.8rem;
+      }
+
+      th, td {
+        padding: 8px;
+      }
+
+      thead {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      th, td {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body class="sub_page">
